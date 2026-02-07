@@ -51,13 +51,7 @@ const Footer = () => {
                         {/* Brand Column */}
                         <div className="footer-brand">
                             <Link to="/" className="footer-logo">
-                                <div className="footer-logo-icon">
-                                    <span>S</span>
-                                </div>
-                                <div className="footer-logo-text">
-                                    <span className="footer-logo-name">SmartTech</span>
-                                    <span className="footer-logo-tagline">Management Service</span>
-                                </div>
+                                <img src="/smart.png" alt="SmartTech Management Service" className="footer-logo-image" />
                             </Link>
                             <p className="footer-description">
                                 Empowering careers through smart technology and management.

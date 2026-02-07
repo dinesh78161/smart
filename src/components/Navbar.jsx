@@ -34,13 +34,7 @@ const Navbar = () => {
             <div className="navbar-container">
                 {/* Logo */}
                 <Link to="/" className="navbar-logo">
-                    <div className="logo-icon">
-                        <span>S</span>
-                    </div>
-                    <div className="logo-text">
-                        <span className="logo-name">SmartTech</span>
-                        <span className="logo-tagline">Management Service</span>
-                    </div>
+                    <img src="/smart.png" alt="SmartTech Management Service" className="logo-image" />
                 </Link>
 
                 {/* Desktop Navigation */}
