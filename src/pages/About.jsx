@@ -50,9 +50,9 @@ const About = () => {
 
     const team = [
         {
-            name: 'Rajesh Kumar',
+            name: 'Raja',
             role: 'Founder & CEO',
-            image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop',
+            image: 'public/raja.jpeg',
             bio: '15+ years in tech industry with experience at leading companies.'
         },
         {
