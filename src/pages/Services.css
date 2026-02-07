@@ -1,0 +1,558 @@
+/* ========================================
+   Services Page Styles
+======================================== */
+
+/* Hero Section */
+.services-hero {
+    position: relative;
+    padding: calc(80px + var(--space-20)) 0 var(--space-20);
+    overflow: hidden;
+}
+
+.services-hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+.services-hero-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            var(--primary-700) 0%,
+            var(--primary-900) 100%);
+}
+
+.services-hero-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.services-hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.services-hero .section-label {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.services-hero h1 {
+    color: white;
+    font-size: var(--text-5xl);
+    margin-bottom: var(--space-6);
+}
+
+.services-hero p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: var(--text-xl);
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Section Header */
+.section-header {
+    text-align: center;
+    margin-bottom: var(--space-12);
+}
+
+.section-header h2 {
+    margin-bottom: var(--space-4);
+}
+
+.section-header p {
+    font-size: var(--text-lg);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Training Section */
+.training-section {
+    background: white;
+}
+
+.training-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+}
+
+.training-card {
+    background: var(--neutral-50);
+    padding: var(--space-8);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--neutral-100);
+    transition: all var(--transition-base);
+}
+
+.training-card:hover {
+    background: white;
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary-200);
+}
+
+.training-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-5);
+}
+
+.training-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-500), var(--primary-700));
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.training-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3);
+    background: var(--primary-100);
+    color: var(--primary-700);
+    border-radius: var(--radius-full);
+    font-size: var(--text-sm);
+    font-weight: 500;
+}
+
+.training-card h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-3);
+}
+
+.training-card p {
+    margin-bottom: var(--space-5);
+}
+
+.training-features {
+    margin-bottom: var(--space-6);
+}
+
+.training-features li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-2) 0;
+    font-size: var(--text-sm);
+    color: var(--neutral-600);
+}
+
+.training-features svg {
+    color: var(--success);
+    flex-shrink: 0;
+}
+
+.training-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-weight: 600;
+    color: var(--primary-600);
+    transition: all var(--transition-fast);
+}
+
+.training-link:hover {
+    gap: var(--space-3);
+    color: var(--primary-700);
+}
+
+/* Workshops Section */
+.workshops-section {
+    background: var(--neutral-50);
+}
+
+.workshops-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-16);
+    align-items: start;
+}
+
+.workshops-content h2 {
+    margin-bottom: var(--space-2);
+}
+
+.workshops-content>p {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-8);
+}
+
+.workshops-benefits {
+    margin-bottom: var(--space-8);
+}
+
+.workshops-benefits li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-3) 0;
+    font-size: var(--text-base);
+    color: var(--neutral-700);
+}
+
+.workshops-benefits svg {
+    color: var(--primary-600);
+    flex-shrink: 0;
+}
+
+.workshops-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.workshop-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: var(--space-6);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--neutral-100);
+    transition: all var(--transition-base);
+}
+
+.workshop-card:hover {
+    transform: translateX(5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-200);
+}
+
+.workshop-info h4 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-2);
+}
+
+.workshop-meta {
+    display: flex;
+    gap: var(--space-4);
+    font-size: var(--text-sm);
+    color: var(--neutral-500);
+}
+
+.workshop-meta span {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.workshop-level {
+    padding: var(--space-2) var(--space-4);
+    background: var(--primary-100);
+    color: var(--primary-700);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    border-radius: var(--radius-full);
+}
+
+/* Internships Section */
+.internships-section {
+    background: white;
+}
+
+.internship-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+    margin-bottom: var(--space-12);
+}
+
+.internship-benefit-card {
+    text-align: center;
+    padding: var(--space-8);
+    background: var(--neutral-50);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--neutral-100);
+    transition: all var(--transition-base);
+}
+
+.internship-benefit-card:hover {
+    background: white;
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-200);
+}
+
+.benefit-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--primary-500), var(--primary-700));
+    border-radius: var(--radius-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 0 auto var(--space-6);
+}
+
+.internship-benefit-card h4 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-3);
+}
+
+.internship-benefit-card p {
+    font-size: var(--text-sm);
+    margin: 0;
+}
+
+.internship-cta {
+    background: linear-gradient(135deg, var(--primary-50), var(--primary-100));
+    padding: var(--space-12);
+    border-radius: var(--radius-2xl);
+    text-align: center;
+}
+
+.internship-cta h3 {
+    font-size: var(--text-2xl);
+    margin-bottom: var(--space-3);
+}
+
+.internship-cta p {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-6);
+}
+
+/* Pricing Section */
+.pricing-section {
+    background: var(--neutral-50);
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-8);
+    align-items: start;
+}
+
+.pricing-card {
+    position: relative;
+    background: white;
+    padding: var(--space-10);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--neutral-200);
+    transition: all var(--transition-base);
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.pricing-card.popular {
+    border-color: var(--primary-500);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    transform: scale(1.05);
+}
+
+.pricing-card.popular:hover {
+    transform: scale(1.05) translateY(-5px);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: var(--space-2) var(--space-5);
+    background: linear-gradient(135deg, var(--primary-500), var(--primary-700));
+    color: white;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    border-radius: var(--radius-full);
+}
+
+.pricing-card h3 {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-4);
+}
+
+.pricing-price {
+    margin-bottom: var(--space-8);
+}
+
+.pricing-price .price {
+    font-family: var(--font-heading);
+    font-size: var(--text-4xl);
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary-600), var(--primary-800));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.pricing-price .duration {
+    display: block;
+    color: var(--neutral-500);
+    font-size: var(--text-sm);
+    margin-top: var(--space-1);
+}
+
+.pricing-features {
+    margin-bottom: var(--space-8);
+}
+
+.pricing-features li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) 0;
+    color: var(--neutral-600);
+    border-bottom: 1px solid var(--neutral-100);
+}
+
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.pricing-features svg {
+    color: var(--success);
+    flex-shrink: 0;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+/* FAQ Section */
+.faq-section {
+    background: white;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: var(--space-12);
+}
+
+.faq-header h2 {
+    margin-bottom: var(--space-3);
+}
+
+.faq-header p {
+    font-size: var(--text-lg);
+}
+
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+}
+
+.faq-item {
+    padding: var(--space-6);
+    background: var(--neutral-50);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--neutral-100);
+}
+
+.faq-item h4 {
+    font-size: var(--text-lg);
+    margin-bottom: var(--space-3);
+}
+
+.faq-item p {
+    margin: 0;
+}
+
+/* CTA Section */
+.services-cta {
+    position: relative;
+    padding: var(--space-20) 0;
+    background: linear-gradient(135deg, var(--primary-600), var(--primary-800));
+    overflow: hidden;
+}
+
+.services-cta-bg {
+    position: absolute;
+    inset: 0;
+}
+
+.services-cta-pattern {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.services-cta-content {
+    position: relative;
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.services-cta-content h2 {
+    color: white;
+    font-size: var(--text-3xl);
+    margin-bottom: var(--space-4);
+}
+
+.services-cta-content p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-8);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .training-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .workshops-layout {
+        grid-template-columns: 1fr;
+        gap: var(--space-10);
+    }
+
+    .internship-benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .pricing-card.popular {
+        transform: none;
+    }
+
+    .pricing-card.popular:hover {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-hero h1 {
+        font-size: var(--text-4xl);
+    }
+
+    .training-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .services-hero h1 {
+        font-size: var(--text-3xl);
+    }
+
+    .internship-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}
