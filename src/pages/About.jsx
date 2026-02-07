@@ -52,7 +52,7 @@ const About = () => {
         {
             name: 'Raja',
             role: 'Founder & CEO',
-            image: 'public/raja.jpeg',
+            image: '/raja.jpeg',
             bio: '15+ years in tech industry with experience at leading companies.'
         },
         {
