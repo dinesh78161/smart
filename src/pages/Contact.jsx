@@ -55,8 +55,8 @@ const Contact = () => {
         {
             icon: Phone,
             title: 'Call Us',
-            primary: '+91 98765 43210',
-            secondary: '+91 98765 43211'
+            primary: '+91 70755 68963',
+            secondary: '+91 7989313189'
         },
         {
             icon: MapPin,

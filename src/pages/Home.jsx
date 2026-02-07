@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import {
     ArrowRight,
@@ -16,6 +17,57 @@ import {
     Rocket
 } from 'lucide-react'
 import './Home.css'
+
+const Counter = ({ end, duration = 2000, suffix = '' }) => {
+    const [count, setCount] = useState(0)
+    const countRef = useRef(null)
+    const [isVisible, setIsVisible] = useState(false)
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true)
+                }
+            },
+            { threshold: 0.1 }
+        )
+
+        if (countRef.current) {
+            observer.observe(countRef.current)
+        }
+
+        return () => {
+            if (countRef.current) {
+                observer.unobserve(countRef.current)
+            }
+        }
+    }, [])
+
+    useEffect(() => {
+        if (!isVisible) return
+
+        let startTime = null
+        const animate = (currentTime) => {
+            if (!startTime) startTime = currentTime
+            const progress = Math.min((currentTime - startTime) / duration, 1)
+
+            setCount(Math.floor(progress * end))
+
+            if (progress < 1) {
+                requestAnimationFrame(animate)
+            }
+        }
+
+        requestAnimationFrame(animate)
+    }, [isVisible, end, duration])
+
+    return (
+        <span ref={countRef}>
+            {count}{suffix}
+        </span>
+    )
+}
 
 const Home = () => {
     const services = [
@@ -40,10 +92,10 @@ const Home = () => {
     ]
 
     const stats = [
-        { value: '500+', label: 'Students Trained', icon: GraduationCap },
-        { value: '50+', label: 'Programs Offered', icon: BookOpen },
-        { value: '95%', label: 'Placement Rate', icon: TrendingUp },
-        { value: '30+', label: 'Industry Partners', icon: Briefcase }
+        { value: 500, suffix: '+', label: 'Students Trained', icon: GraduationCap },
+        { value: 50, suffix: '+', label: 'Programs Offered', icon: BookOpen },
+        { value: 95, suffix: '%', label: 'Placement Rate', icon: TrendingUp },
+        { value: 30, suffix: '+', label: 'Industry Partners', icon: Briefcase }
     ]
 
     const whyChooseUs = [
@@ -157,7 +209,9 @@ const Home = () => {
                                 <div className="stat-icon">
                                     <stat.icon size={28} />
                                 </div>
-                                <div className="stat-value">{stat.value}</div>
+                                <div className="stat-value">
+                                    <Counter end={stat.value} suffix={stat.suffix} />
+                                </div>
                                 <div className="stat-label">{stat.label}</div>
                             </div>
                         ))}
